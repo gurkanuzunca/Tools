@@ -35,7 +35,7 @@ Sınıf oluşturulduktan sonra verilerin ve kuralların atanması.
 $validation = new Validate();
 
 // Veriler key->value şeklinde olmalıdır.
-$validation->setData($_POST);
+$validation->setValue($_POST);
 
 $validation->setRule('name', 'required', 'Lütfen adınızı ve soyadınızı yazın.');
 $validation->setRule('name', 'minLength', array(
