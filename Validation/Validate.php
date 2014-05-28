@@ -123,9 +123,9 @@ class Validate
      *
      * @param array|string $name
      * @param $rule
-     * @param array $parameters
+     * @param $parameters
      */
-    public function setRule($name, $rule, array $parameters)
+    public function setRule($name, $rule, $parameters)
     {
         if (is_array($name)) {
             $this->rules = array_merge($this->rules, $name);
