@@ -121,13 +121,18 @@ class Validate
     /**
      * Belirtilen alana yeni kural atar.
      *
-     * @param $name
+     * @param array|string $name
      * @param $rule
      * @param array $parameters
      */
     public function setRule($name, $rule, array $parameters)
     {
-        $this->rules[$name][$rule] = $parameters;
+        if (is_array($name)) {
+            $this->rules = array_merge($this->rules, $name);
+        } else {
+            $this->rules[$name][$rule] = $parameters;
+        }
+
     }
 
     /**
