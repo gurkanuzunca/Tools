@@ -66,7 +66,7 @@ Sınıf oluşturulduktan sonra verilerin farklı bir dosyadan atanması.
 ```php
 $validation = new Validate();
 
-// Dosya yolu belirtilir. Dosya php olmalıdır ve değer döndürmelidir.
+// Dosya yolu belirtilir. Dosya php olmalıdır ve değer döndürmelidir. Uzantı yazılmasına herek yoktur.
 $validation->loadRulesFile('forms/rule');
 
 if ($validation->valid()) {
